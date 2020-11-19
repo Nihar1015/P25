@@ -4,8 +4,11 @@ const World = Matter.World;
 const Bodies = Matter.Bodies;
 const Body = Matter.Body;
 
+var dustbinImg;
+
 function preload()
 {
+  //dustbinImg = loadImage('Images/dustbingreen.png');
 	
 }
 
@@ -16,7 +19,7 @@ function setup() {
 	engine = Engine.create();
 	world = engine.world;
 
-	paper = new Paper(150,550,10);
+	paper = new Paper(150,550,20);
 
 	dustbin1 = new Dustbin(550,635, 100, 10);
 	dustbin2 = new Dustbin(600,605,10,100);
@@ -34,11 +37,12 @@ function setup() {
 
 function draw() {
   rectMode(CENTER);
-  background(0);
+  background(255);
   paper.display();
   dustbin1.display();
   dustbin2.display();
   dustbin3.display();
+  //image(dustbinImg);
   ground.display();
   
  
@@ -46,7 +50,7 @@ function draw() {
 
 function keyPressed(){
 	  if(keyCode === UP_ARROW){
-		  Matter.Body.applyForce(paper.body, paper.body.position,{x:10, y:-17});
+		  Matter.Body.applyForce(paper.body, paper.body.position,{x:35, y:-80});
 	  }
 
 
