@@ -43,8 +43,6 @@ function draw() {
   dustbin1.display();
   dustbin2.display();
   dustbin3.display();
-  
-  
   image(dustbinImg,550,595,125,130);
   
  
