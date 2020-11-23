@@ -8,7 +8,7 @@ var dustbinImg;
 
 function preload()
 {
-  //dustbinImg = loadImage('Images/dustbingreen.png');
+  dustbinImg = loadImage('Images/dustbingreen.png');
 	
 }
 
@@ -38,12 +38,14 @@ function setup() {
 function draw() {
   rectMode(CENTER);
   background(255);
+  ground.display();
   paper.display();
   dustbin1.display();
   dustbin2.display();
   dustbin3.display();
-  //image(dustbinImg);
-  ground.display();
+  
+  
+  image(dustbinImg,550,595,125,130);
   
  
 }
