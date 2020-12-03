@@ -8,7 +8,7 @@ var dustbinImg;
 
 function preload()
 {
-  dustbinImg = loadImage('Images/dustbingreen.png');
+  dustbinImg = loadImage('dustbingreen.png');
 	
 }
 
